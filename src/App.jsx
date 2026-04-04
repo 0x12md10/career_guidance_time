@@ -2,6 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import { useLanguage } from './context/LanguageContext';
 import SplashScreen from './components/SplashScreen';
 import AdminPage from './pages/AdminPage';
+import LegalPage from './pages/LegalPage';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Stats from './components/Stats';
@@ -39,6 +40,7 @@ export default function App() {
   return (
     <Routes>
       <Route path="/admin" element={<AdminPage />} />
+      <Route path="/privacy-policy" element={<LegalPage />} />
       <Route path="*" element={<MainSite />} />
     </Routes>
   );

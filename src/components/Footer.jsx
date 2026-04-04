@@ -69,12 +69,17 @@ export default function Footer() {
 
         {/* Bottom */}
         <div className="border-t border-white/5 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-white/30 text-xs font-tamil text-center">{ft.copyright}</p>
+          <div className="flex flex-col sm:flex-row items-center gap-3">
+            <p className="text-white/30 text-xs font-tamil text-center">{ft.copyright}</p>
+            <a href="/privacy-policy" className="text-white/30 hover:text-brand-400 text-xs transition-colors whitespace-nowrap">
+              Privacy Policy
+            </a>
+          </div>
           <div className="flex items-center gap-3">
-            <a href="#" className="text-white/30 hover:text-brand-400 transition-colors">
+            <a href="https://www.instagram.com/time.tirunelveli/" className="text-white/30 hover:text-brand-400 transition-colors">
               <Instagram size={16} />
             </a>
-            <a href="#" className="text-white/30 hover:text-brand-400 transition-colors">
+            <a href="https://www.instagram.com/time.tirunelveli/" className="text-white/30 hover:text-brand-400 transition-colors">
               <Youtube size={16} />
             </a>
           </div>
