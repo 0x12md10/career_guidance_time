@@ -82,13 +82,19 @@ export default function LegalPage() {
 
           <section>
             <h2 className="text-white text-lg font-semibold mb-3">3. How We Use Your Information</h2>
-            <ul className="space-y-2">
+            <p className="mb-3">
+              By registering, you explicitly consent to T.I.M.E Tirunelveli contacting you through
+              the channels you have provided for the following purposes:
+            </p>
+            <ul className="space-y-2.5">
               {[
-                'To confirm your registration for the SIGARAM THODU event.',
-                'To send a confirmation message to your email address via AWS Simple Email Service (SES).',
-                'To send a confirmation message to your WhatsApp number via the Meta WhatsApp Business Cloud API.',
+                'To confirm your registration for the SIGARAM THODU event via email and WhatsApp.',
+                'To send event-related updates (date, venue, or schedule changes) via email and WhatsApp.',
+                'To share information about T.I.M.E Tirunelveli courses, programs, and upcoming admission cycles.',
+                'To invite you to free counselling sessions, career guidance workshops, and educational seminars.',
+                'To assist you with course enquiries, admission procedures, and enrolment processes.',
+                'To follow up on your academic goals and suggest relevant T.I.M.E programs suited to your grade and stream.',
                 'To manage event attendance, seating, and logistics.',
-                'To contact you with important updates related to the event (date, venue, or schedule changes).',
                 'To generate anonymised attendance statistics for internal reporting.',
               ].map((item, i) => (
                 <li key={i} className="flex items-start gap-2.5">
@@ -97,9 +103,28 @@ export default function LegalPage() {
                 </li>
               ))}
             </ul>
-            <p className="mt-4 p-4 bg-brand-500/5 border border-brand-500/20 rounded-xl text-white/60">
-              We do <strong className="text-white">not</strong> use your data for advertising, profiling,
-              or any purpose beyond the SIGARAM THODU event.
+
+            <div className="mt-5 p-4 bg-brand-500/5 border border-brand-500/20 rounded-xl space-y-2 text-white/60">
+              <p>
+                <strong className="text-white">WhatsApp communications</strong> — By providing your
+                phone number, you consent to receiving WhatsApp messages from T.I.M.E Tirunelveli
+                regarding event confirmations, course information, counselling session invitations,
+                and admission-related updates. You may opt out at any time by replying{' '}
+                <span className="text-white font-medium">STOP</span> to any message or by contacting
+                us directly (see Section 9).
+              </p>
+              <p>
+                <strong className="text-white">Email communications</strong> — By providing your
+                email address, you consent to receiving emails from T.I.M.E Tirunelveli for the
+                same purposes listed above. You may unsubscribe at any time.
+              </p>
+            </div>
+
+            <p className="mt-4 p-4 bg-white/3 border border-white/8 rounded-xl text-white/50 text-xs">
+              All communications are strictly from T.I.M.E Tirunelveli and relate only to
+              educational programs, career guidance, and admission services. We do{' '}
+              <strong className="text-white/80">not</strong> use your data for third-party
+              advertising or commercial profiling.
             </p>
           </section>
 
