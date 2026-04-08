@@ -17,6 +17,7 @@ const COLUMNS = [
   { key: 'parentName', label: 'Parent Name' },
   { key: 'parentPhone', label: 'Parent Phone' },
   { key: 'howHeard', label: 'Source' },
+  { key: 'checkedIn', label: 'Attendance' },
 ];
 
 function formatDate(iso) {
@@ -106,6 +107,7 @@ function LoginScreen({ onLogin }) {
 function Dashboard({ token, onLogout }) {
   const [rows, setRows] = useState([]);
   const [total, setTotal] = useState(0);
+  const [checkedInCount, setCheckedInCount] = useState(0);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
   const [search, setSearch] = useState('');
@@ -120,21 +122,20 @@ function Dashboard({ token, onLogout }) {
     setLoading(true);
     setError('');
     try {
-      const params = new URLSearchParams({
-        page,
-        limit: PAGE_SIZE,
-        search,
-        sortKey,
-        sortDir,
-      });
-      const res = await fetch(`${API_BASE}/admin/registrations?${params}`, {
-        headers: { Authorization: `Bearer ${token}` },
-      });
-      if (res.status === 401) { onLogout(); return; }
-      const data = await res.json();
+      const params = new URLSearchParams({ page, limit: PAGE_SIZE, search, sortKey, sortDir });
+      const [regRes, statsRes] = await Promise.all([
+        fetch(`${API_BASE}/admin/registrations?${params}`, { headers: { Authorization: `Bearer ${token}` } }),
+        fetch(`${API_BASE}/checkin`, { headers: { Authorization: `Bearer ${token}` } }),
+      ]);
+      if (regRes.status === 401) { onLogout(); return; }
+      const data = await regRes.json();
       if (!data.success) throw new Error(data.message);
       setRows(data.registrations);
       setTotal(data.total);
+      if (statsRes.ok) {
+        const stats = await statsRes.json();
+        if (stats.success) setCheckedInCount(stats.checkedIn);
+      }
     } catch (err) {
       setError(err.message);
     } finally {
@@ -206,6 +207,16 @@ function Dashboard({ token, onLogout }) {
             <Users size={16} className="text-brand-400" />
             <span className="text-white font-semibold">{total.toLocaleString()}</span>
             <span className="text-white/50 text-sm">total registrations</span>
+          </div>
+          <div className="flex items-center gap-2 bg-green-500/10 border border-green-500/20 rounded-xl px-4 py-2.5">
+            <CheckCircle2 size={16} className="text-green-400" />
+            <span className="text-white font-semibold">{checkedInCount.toLocaleString()}</span>
+            <span className="text-white/50 text-sm">checked in</span>
+          </div>
+          <div className="flex items-center gap-2 bg-white/5 border border-white/10 rounded-xl px-4 py-2.5">
+            <Users size={16} className="text-white/30" />
+            <span className="text-white font-semibold">{(total - checkedInCount).toLocaleString()}</span>
+            <span className="text-white/50 text-sm">absent</span>
           </div>
         </div>
 
@@ -304,6 +315,15 @@ function Dashboard({ token, onLogout }) {
                     <td className="px-3 py-3 text-white/50">{row.parentName || '—'}</td>
                     <td className="px-3 py-3 text-white/50 font-mono text-xs">{row.parentPhone || '—'}</td>
                     <td className="px-3 py-3 text-white/40 text-xs whitespace-nowrap">{row.howHeard || '—'}</td>
+                    <td className="px-3 py-3 whitespace-nowrap">
+                      {row.checkedIn ? (
+                        <span className="flex items-center gap-1 text-green-400 text-xs font-medium">
+                          <CheckCircle2 size={12} /> Present
+                        </span>
+                      ) : (
+                        <span className="text-white/25 text-xs">—</span>
+                      )}
+                    </td>
                   </tr>
                 ))}
               </tbody>
