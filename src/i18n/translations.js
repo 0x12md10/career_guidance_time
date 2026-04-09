@@ -10,6 +10,15 @@ export const translations = {
       english: 'English',
       tamil: 'தமிழ்',
     },
+    welcome: {
+      badge: 'Special Offer',
+      title: 'Exclusive Free Gift for All Attendees!',
+      body: 'Every student who attends SIGARAM THODU will receive T.I.M.E study materials worth',
+      amount: '₹32,000',
+      bodyEnd: 'absolutely free — just for showing up!',
+      cta: 'Claim Your Spot — Register Free',
+      close: 'Continue to Site',
+    },
     nav: {
       logoTitle: 'SIGARAM THODU',
       logoSub: 'T.I.M.E Tirunelveli',
@@ -215,6 +224,15 @@ export const translations = {
       choose: 'உங்கள் விருப்பமான மொழியை தேர்வு செய்யுங்கள்',
       english: 'English',
       tamil: 'தமிழ்',
+    },
+    welcome: {
+      badge: 'சிறப்பு அறிவிப்பு',
+      title: 'கலந்துகொள்வோருக்கு இலவச சிறப்பு பரிசு!',
+      body: 'சிகரம் தொடு நிகழ்ச்சியில் கலந்துகொள்ளும் அனைத்து மாணவர்களுக்கும் T.I.M.E படிப்பு தொகுப்புகள்',
+      amount: '₹32,000',
+      bodyEnd: 'மதிப்பில் முற்றிலும் இலவசமாக வழங்கப்படும்!',
+      cta: 'இப்போதே இலவசமாக பதிவு செய்யுங்கள்',
+      close: 'தொடரவும்',
     },
     nav: {
       logoTitle: 'சிகரம் தொடு',
