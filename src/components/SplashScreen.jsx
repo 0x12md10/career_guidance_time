@@ -17,10 +17,8 @@ export default function SplashScreen() {
 
       <div className="relative z-10 w-full max-w-lg mx-auto px-6 text-center animate-fade-up">
         {/* Logo mark */}
-        <div className="flex justify-center mb-6">
-          <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-brand-500 to-brand-700 flex items-center justify-center shadow-2xl shadow-brand-500/30">
-            <span className="text-white font-bold text-2xl">T</span>
-          </div>
+        <div className="flex justify-center mb-4">
+          <img src="/icon.png" alt="Sigaram Thodu" className="h-32 w-auto object-contain drop-shadow-2xl" />
         </div>
 
         {/* Program name — never translated */}

@@ -65,7 +65,7 @@ export default function About() {
               <Gift size={18} className="text-brand-400" />
               {ab.giftsTitle}
             </h3>
-            <div className="space-y-4">
+            <div className="space-y-4 pb-2">
               {ab.gifts.map((g, i) => (
                 <div
                   key={i}

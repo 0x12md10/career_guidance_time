@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1c0900"/>
+      <stop offset="100%" stop-color="#0d0d14"/>
+    </linearGradient>
+    <linearGradient id="mtRight" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f97316"/>
+      <stop offset="100%" stop-color="#7c2d12"/>
+    </linearGradient>
+    <linearGradient id="mtLeft" x1="1" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#431407"/>
+      <stop offset="100%" stop-color="#6b2110"/>
+    </linearGradient>
+    <radialGradient id="lightGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fef3c7" stop-opacity="1"/>
+      <stop offset="45%" stop-color="#fbbf24" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#f59e0b" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="baseGlow" cx="50%" cy="100%" r="70%">
+      <stop offset="0%" stop-color="#ea6c00" stop-opacity="0.28"/>
+      <stop offset="100%" stop-color="#ea6c00" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="48" height="48" rx="11" fill="url(#bg)"/>
+  <rect width="48" height="48" rx="11" fill="url(#baseGlow)"/>
+
+  <!-- ── LIGHT BEAMS from peak (24,22) upward ── -->
+  <polygon points="24,22 1,1  8,8"  fill="#fde68a" opacity="0.13"/>
+  <polygon points="24,22 5,3  13,9" fill="#fde68a" opacity="0.18"/>
+  <polygon points="24,22 15,1 21,3" fill="#fde68a" opacity="0.22"/>
+  <polygon points="24,22 21,1 27,1" fill="#fde68a" opacity="0.26"/>
+  <polygon points="24,22 27,3 33,1" fill="#fde68a" opacity="0.22"/>
+  <polygon points="24,22 35,9 43,3" fill="#fde68a" opacity="0.18"/>
+  <polygon points="24,22 40,8  47,1" fill="#fde68a" opacity="0.13"/>
+
+  <!-- ── MOUNTAIN — peak at (24,22) ── -->
+  <!-- Left face (shadow) -->
+  <polygon points="24,22 4,44 24,44"  fill="url(#mtLeft)"/>
+  <!-- Right face (light) -->
+  <polygon points="24,22 44,44 24,44" fill="url(#mtRight)"/>
+
+  <!-- ── LIGHT GLOW — centred exactly on peak ── -->
+  <circle cx="24" cy="22" r="11" fill="url(#lightGlow)"/>
+  <circle cx="24" cy="22" r="5"  fill="#fbbf24" opacity="0.28"/>
+  <circle cx="24" cy="22" r="2.6" fill="#fde68a"/>
+  <circle cx="24" cy="22" r="1.1" fill="#ffffff"/>
+
+  <!-- ── BASE LINE ── -->
+  <rect x="4" y="43.5" width="40" height="1.5" rx="0.75" fill="#f97316" opacity="0.35"/>
+</svg>

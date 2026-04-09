@@ -23,10 +23,8 @@ export default function Navbar() {
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-2 group">
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-brand-500 to-brand-700 flex items-center justify-center text-white font-bold text-sm">
-            T
-          </div>
+        <a href="#" className="flex items-center gap-2.5 group">
+          <img src="/icon.png" alt="Sigaram Thodu" className="h-14 w-auto flex-shrink-0 object-contain drop-shadow-lg" />
           <div className="leading-tight">
             <p className="text-white font-semibold text-sm font-tamil">{t('nav.logoTitle')}</p>
             <p className="text-brand-400 text-xs">{t('nav.logoSub')}</p>
