@@ -12,9 +12,7 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-2 mb-3">
-              <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-brand-500 to-brand-700 flex items-center justify-center text-white font-bold">
-                T
-              </div>
+              <img src="/icon.png" alt="Sigaram Thodu" className="h-14 w-auto object-contain" />
               <div>
                 <p className="text-white font-bold font-tamil">SIGARAM THODU</p>
                 <p className="text-brand-400 text-xs">T.I.M.E Tirunelveli</p>

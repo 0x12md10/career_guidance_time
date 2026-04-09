@@ -26,7 +26,6 @@ export const translations = {
       links: [
         { label: 'Key Highlights', href: '#highlights' },
         { label: 'Event Details', href: '#about' },
-        { label: 'Register', href: '#register' },
       ],
       cta: 'Register Free',
     },
@@ -35,7 +34,7 @@ export const translations = {
       title1: 'SIGARAM',
       title2: 'THODU',
       subtitle: 'A Free Career Guidance Program',
-      desc: 'For students from grades 9–12 — Plan your future and choose the right career!',
+      desc: 'For school students (grades 9–12) and college students — Plan your future and choose the right career!',
       date: 'April 26, 2026',
       time: '9:00 AM — 1:00 PM',
       venue: 'T.I.M.E, Tirunelveli',
@@ -101,8 +100,12 @@ export const translations = {
         venueLabel: 'Venue',
         venueValue: 'T.I.M.E Institute, Tirunelveli',
         whoLabel: 'For Whom?',
-        whoValue: 'Students from grades 9–12 and their parents',
+        whoValue: 'School students (grades 9–12), college students and their parents',
       },
+      voucherTag: 'Exclusive Offer',
+      voucherAmount: '₹42,000',
+      voucherTitle: 'FREE Vouchers for Every Attendee!',
+      voucherSub: 'Everyone who attends SIGARAM THODU in person walks out with vouchers worth ₹42,000 provided by Triumphant Institute of Management Education (T.I.M.E.) - Tirunelveli',
       giftsTitle: 'Free Gifts for Attendees!',
       gifts: [
         { emoji: '📚', title: 'Scholarship Handbook', value: 'Worth ₹500', desc: 'Save up to ₹5 lakhs on college fees' },
@@ -112,7 +115,7 @@ export const translations = {
       ],
       whoTitle: 'Who Should Attend?',
       whoList: [
-        'Students studying in grades 9, 10, 11, 12',
+        'Students studying in grades 9, 10, 11, 12 or college',
         'Students who finished 12th and are unsure what to study',
         'Anyone confused between Engineering vs Medical vs Arts',
         'Parents concerned about their child\'s future',
@@ -176,7 +179,7 @@ export const translations = {
         },
         {
           q: 'Who can attend?',
-          a: 'Students from grades 9, 10, 11, 12 and their parents can attend. Those who have completed 12th may also come.',
+          a: 'School students from grades 9, 10, 11, 12 and college students along with their parents can attend.',
         },
         {
           q: 'Where will the event be held?',
@@ -197,7 +200,7 @@ export const translations = {
       ],
     },
     footer: {
-      tagline: 'A free career guidance program for students in grades 9–12. Touch your peak!',
+      tagline: 'A free career guidance program for school and college students. Touch your peak!',
       contactTitle: 'Contact Us',
       linksTitle: 'Quick Links',
       links: [
@@ -242,7 +245,6 @@ export const translations = {
       links: [
         { label: 'முக்கிய தகவல்கள்', href: '#highlights' },
         { label: 'நிகழ்ச்சி விவரம்', href: '#about' },
-        { label: 'பதிவு', href: '#register' },
       ],
       cta: 'இலவசமாக பதிவு செய்யுங்கள்',
     },
@@ -251,7 +253,7 @@ export const translations = {
       title1: 'சிகரம்',
       title2: 'தொடு',
       subtitle: 'இலவச கல்வி வழிகாட்டல் நிகழ்ச்சி',
-      desc: '9 முதல் 12 வரை படிக்கும் மாணவர்களுக்காக — உங்கள் எதிர்காலத்தை திட்டமிடுங்கள், சரியான career தேர்வு செய்யுங்கள்!',
+      desc: '9 முதல் 12 வகுப்பு மற்றும் கல்லூரி மாணவர்களுக்காக — உங்கள் எதிர்காலத்தை திட்டமிடுங்கள், சரியான career தேர்வு செய்யுங்கள்!',
       date: 'ஏப்ரல் 26, 2026',
       time: 'காலை 9:00 — மதியம் 1:00',
       venue: 'T.I.M.E, திருநெல்வேலி',
@@ -317,9 +319,13 @@ export const translations = {
         venueLabel: 'இடம்',
         venueValue: 'T.I.M.E Institute, திருநெல்வேலி',
         whoLabel: 'யாருக்கு?',
-        whoValue: '9 — 12 வகுப்பு மாணவர்கள் மற்றும் பெற்றோர்கள்',
+        whoValue: '9 — 12 வகுப்பு, கல்லூரி மாணவர்கள் மற்றும் பெற்றோர்கள்',
       },
-      giftsTitle: 'பங்கேற்றால் இலவசமாக கிடைக்கும்!',
+      voucherTag: 'சிறப்பு சலுகை',
+      voucherAmount: '₹42,000',
+      voucherTitle: 'கலந்துகொள்வோருக்கு இலவச Vouchers!',
+      voucherSub: 'சிகரம் தொடு நிகழ்ச்சியில் நேரில் கலந்துகொள்ளும் அனைவருக்கும் ₹42,000 மதிப்புள்ள vouchers — Triumphant Institute of Management Education (T.I.M.E.) - திருநெல்வேலி சார்பாக வழங்கப்படும்.',
+      giftsTitle: 'நீங்கள் பெறுவது!',
       gifts: [
         { emoji: '📚', title: 'Scholarship Handbook', value: '₹500 மதிப்பு', desc: 'College fees-ல் ₹5 லட்சம் வரை மிச்சப்படுத்துங்கள்' },
         { emoji: '⚙️', title: 'Engineering Career Handbook', value: '₹500 மதிப்பு', desc: 'Top Engineering courses, colleges, skills & career roadmaps' },
@@ -328,7 +334,7 @@ export const translations = {
       ],
       whoTitle: 'யார் கலந்துகொள்ளலாம்?',
       whoList: [
-        '9, 10, 11, 12 வகுப்பு படிக்கும் மாணவர்கள்',
+        '9, 10, 11, 12 வகுப்பு மற்றும் கல்லூரி படிக்கும் மாணவர்கள்',
         '12th முடித்து என்ன படிப்பது என்று தெரியாதவர்கள்',
         'Engineering vs Medical vs Arts யாரும் confused ஆனவர்கள்',
         'மாணவர்களின் எதிர்காலம் பற்றி கவலைப்படும் பெற்றோர்கள்',
@@ -364,7 +370,7 @@ export const translations = {
         parentPhonePlaceholder: 'பெற்றோர் எண்',
         howHeard: 'இந்த நிகழ்ச்சி பற்றி எங்கு தெரிந்துகொண்டீர்கள்?',
         howHeardPlaceholder: 'தேர்வு செய்யுங்கள்',
-        howHeardOptions: ['நண்பர் / சகபாடி', 'Social Media', 'பள்ளி / ஆசிரியர்', 'குடும்பத்தினர்', 'மற்றவை'],
+        howHeardOptions: ['நண்பர்கள்', 'Social Media', 'பள்ளி / ஆசிரியர்', 'குடும்பத்தினர்', 'மற்றவை'],
       },
       submit: 'இலவசமாக பதிவு செய்யுங்கள் →',
       submitting: 'பதிவு செய்யப்படுகிறது...',
@@ -392,7 +398,7 @@ export const translations = {
         },
         {
           q: 'யாரெல்லாம் கலந்துகொள்ளலாம்?',
-          a: '9, 10, 11, 12 வகுப்பு மாணவர்கள் மற்றும் அவர்களின் பெற்றோர்கள் கலந்துகொள்ளலாம். 12th முடித்தவர்களும் வரலாம்.',
+          a: '9, 10, 11, 12 வகுப்பு மற்றும் கல்லூரி மாணவர்கள் மற்றும் அவர்களின் பெற்றோர்கள் கலந்துகொள்ளலாம்.',
         },
         {
           q: 'நிகழ்ச்சி எங்கே நடைபெறும்?',
@@ -413,7 +419,7 @@ export const translations = {
       ],
     },
     footer: {
-      tagline: '9 முதல் 12 வகுப்பு மாணவர்களுக்கான இலவச தொழில் வழிகாட்டல் நிகழ்ச்சி. உங்கள் சிகரத்தை தொடுங்கள்!',
+      tagline: '9 முதல் 12 வகுப்பு மற்றும் கல்லூரி மாணவர்களுக்கான இலவச கல்வி வழிகாட்டல் நிகழ்ச்சி. உங்கள் சிகரத்தை தொடுங்கள்!',
       contactTitle: 'தொடர்பு கொள்ளவும்',
       linksTitle: 'Quick Links',
       links: [
